@@ -109,6 +109,7 @@ gulp.task('serve', () => {
 
     gulp.watch([
       'app/*.html',
+      'app/data/*.json',
       'app/images/**/*',
       '.tmp/fonts/**/*'
     ]).on('change', reload);
@@ -166,7 +167,14 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+// copy .json data files over to new project
+gulp.task('data', function() {
+  return gulp.src(['app/data/*.json'])
+    .pipe($.jsonMinify())
+    .pipe(gulp.dest('dist/data'));
+});
+
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'data'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

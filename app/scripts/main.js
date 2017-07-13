@@ -37,8 +37,8 @@ map.on('load', function() {
      'visibility': 'none'
    },
    'paint': {
-     "line-color": "#a62dd2",
-     "line-width": 4
+     'line-color': '#a62dd2',
+     'line-width': 4
    }
   });
 
@@ -58,8 +58,8 @@ map.on('load', function() {
       'visibility': 'none'
     },
     'paint': {
-      "line-color": "#0271fb",
-      "line-width": 4
+      'line-color': '#0271fb',
+      'line-width': 4
     }
   });
 });
