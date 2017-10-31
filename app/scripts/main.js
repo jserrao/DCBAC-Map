@@ -115,7 +115,7 @@ map.on('load', function() {
   });
 });
 
-var toggleableLayerIds = ['Existing Bike Lanes', 'Signed Bike Routes', 'Off-street Trails' ];
+var toggleableLayerIds = ['Existing Bike Lanes', 'Signed Bike Routes', 'Off-street Trails'];
 
 // From mapbox https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/
 // General idea is to loop through an array of toggleable layers
