@@ -1,3 +1,17 @@
+/*
+PPSA.Trail vector digital data Bike trails primarily in park areas and along the National Mall in the District of Columbia. 
+These are not bicycle lanes along District streets. Bike trails primarily in park areas and along the National Mall in the District of Columbia. 
+This layer was originally created by Bob Patten of Toole Design for the 2005 Bicycle Master Plan. 
+In work As needed -77.117257 -76.910257 38.979647 38.793347 
+None Washington DC DC GIS District of Columbia Transportation bike bicycle commuter trails dc: None 
+This work is licensed under a Creative Commons Attribution 4.0 International License. 
+DDOT Mike Goodno Bicycle Program Specialist Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; 
+Esri ArcGIS 10.3.1.4959 Vector String 91 PPSA.Trail OBJECTID Internal feature number. 
+Esri Sequential unique whole numbers that are automatically generated. 
+Shape Feature geometry. ESRI Coordinates defining the features. 
+LENGTH NAME Name of trail Status Trail status Maintenance Trail ownership Miles SHAPE.LEN 20160610 
+FGDC Content Standard for Digital Geospatial Metadata FGDC-STD-001-1998 local time
+*/
 {
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
