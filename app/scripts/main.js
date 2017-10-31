@@ -49,27 +49,7 @@ map.on('load', function() {
    }
   });
 */
-  
-  // #################
-  // Off-street Trails
-  // #################
-  map.addSource('Off-street Trails', {
-    type: 'geojson',
-    data: './data/Bike_trails_DCopendata_EPSG4326.geojson'
-  });
 
-  map.addLayer({
-    'id': 'Off-street Trails',
-    'type': 'line',
-    'source': 'Off-street Trails',
-    'layout': {
-      'visibility': 'none'
-    },
-    'paint': {
-      'line-color': '#0271fb',
-      'line-width': 4
-    }
-  });
   
   // ##################
   // Existing Bike Lanes
@@ -109,6 +89,27 @@ map.on('load', function() {
     },
     'paint': {
       'line-color': '#20B2AA',
+      'line-width': 4
+    }
+  });
+    
+  // #################
+  // Off-street Trails
+  // #################
+  map.addSource('Off-street Trails', {
+    type: 'geojson',
+    data: './data/Bike_trails_DCopendata_EPSG4326.geojson'
+  });
+
+  map.addLayer({
+    'id': 'Off-street Trails',
+    'type': 'line',
+    'source': 'Off-street Trails',
+    'layout': {
+      'visibility': 'none'
+    },
+    'paint': {
+      'line-color': '#0271fb',
       'line-width': 4
     }
   });
