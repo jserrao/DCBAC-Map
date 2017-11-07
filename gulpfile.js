@@ -110,6 +110,7 @@ gulp.task('serve', () => {
     gulp.watch([
       'app/*.html',
       'app/data/*.json',
+      'app/data/*.geojson',
       'app/images/**/*',
       '.tmp/fonts/**/*'
     ]).on('change', reload);
@@ -168,13 +169,19 @@ gulp.task('wiredep', () => {
 });
 
 // copy .json data files over to new project
-gulp.task('data', function() {
+gulp.task('datajson', function() {
   return gulp.src(['app/data/*.json'])
     .pipe($.jsonMinify())
     .pipe(gulp.dest('dist/data'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'data'], () => {
+// copy .geojson data files over to new project
+gulp.task('datageojson', function() {
+  return gulp.src(['app/data/*.geojson'])
+    .pipe(gulp.dest('dist/data'));
+});
+
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'datajson', 'datageojson'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

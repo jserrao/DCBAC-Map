@@ -19,9 +19,9 @@ var map = new mapboxgl.Map({
  * 15th St NW Bikeway, L/M St NW Bikeway, Penn Ave NW Bikeway and 1 St NE Bikeway
  * created via geojson.io
  *
- * Later substituted the Off-street Trails layer with a GeoJSON layer that was downloaded from the DC Open Data website. 
+ * Later substituted the Off-street Trails layer with a GeoJSON layer that was downloaded from the DC Open Data website.
  * Metadata was added as a comment in the GeoJSON layer file.
- * Added the Existing Bikelanes layer, which was downloaded from DC Open Data and modified in QGIS by subtracting all of the planned bikelanes. 
+ * Added the Existing Bikelanes layer, which was downloaded from DC Open Data and modified in QGIS by subtracting all of the planned bikelanes.
  * Added the Signed Bike Routes layer, which was downloaded from DC Open Data.
  * Turned off the onstreet bikeways layer that was created using geojson.io.
  */
@@ -50,13 +50,13 @@ map.on('load', function() {
   });
 */
 
-  
+
   // ##################
   // Existing Bike Lanes
   // ##################
   map.addSource('Existing Bike Lanes', {
    type: 'geojson',
-   data: './data/Existing_Bike_lanes_DC_opendata.geojson'
+   data: './data/2017-11-06-existing-bike-lanes-dcopendata.geojson'
   });
 
   map.addLayer({
@@ -71,13 +71,13 @@ map.on('load', function() {
      'line-width': 4
    }
   });
-  
+
   // #################
   // Signed Bike Routes
   // #################
   map.addSource('Signed Bike Routes', {
     type: 'geojson',
-    data: './data/Signed_bike_routes_DCopendata_EPSG4326.geojson'
+    data: './data/2017-11-06-signed-bike-routes-dcopendata-epsg4326.geojson'
   });
 
   map.addLayer({
@@ -92,13 +92,13 @@ map.on('load', function() {
       'line-width': 4
     }
   });
-    
+
   // #################
   // Off-street Trails
   // #################
   map.addSource('Off-street Trails', {
     type: 'geojson',
-    data: './data/Bike_trails_DCopendata_EPSG4326.geojson'
+    data: './data/2017-11-06-bike-trails-dcopendata-epsg4326.geojson'
   });
 
   map.addLayer({
